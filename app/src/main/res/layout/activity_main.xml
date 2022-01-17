@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAcentuado"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:layout_marginVertical="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/bombolas" />
+
+        <TextView
+            android:id="@+id/lblNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/numero"
+            android:textAlignment="center"
+            android:textSize="96sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/lineaDivisora"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/lblNumTope"
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/numero_tope"
+            android:textColor="@color/primarioOscuro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            style="@android:style/Widget.Material.SeekBar.Discrete"
+            android:layout_width="335dp"
+            android:layout_height="51dp"
+            android:indeterminate="false"
+            android:max="10"
+            android:min="1"
+            android:progress="1"
+            android:thumb="@color/primario"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82" />
+
+        <Button
+            android:id="@+id/btnGenera"
+            android:layout_width="198dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="100dp"
+            android:backgroundTint="@color/colorBtnGenera"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/btnGenera"
+            android:textAlignment="center"
+            android:textColor="@color/primarioOscuro" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
