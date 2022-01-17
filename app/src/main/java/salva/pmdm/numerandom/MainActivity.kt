@@ -1,29 +1,33 @@
 package salva.pmdm.numerandom
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.widget.Button
+import android.widget.SeekBar
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*
-        val valQueSePedira = findViewById<TextView>(R.id.queSePedira)
-        val valtxtQueSePedira = findViewById<EditText>(R.id.txtQueSePedira)
-        val valBtnPlato = findViewById<Button>(R.id.btnPlato)
-        val valBtnAleat = findViewById<Button>(R.id.btnAleat)
+        val valLblNumero = findViewById<TextView>(R.id.lblNumero)
+        val valBtnGenera = findViewById<Button>(R.id.btnGenera)
+        val valSeekBar = findViewById<SeekBar>(R.id.seekBar)
 
-        valBtnAleat.setOnClickListener{
-            val platoAleatorio = Random.nextInt(listaPlatos.count())
-            valQueSePedira.text = listaPlatos[platoAleatorio]
+        val toast = Toast.makeText(this@MainActivity,
+            "Sorteando...", Toast.LENGTH_SHORT
+        )
+        toast.setGravity(Gravity.CENTER or Gravity.CENTER_HORIZONTAL, 0, 0)
+
+        valBtnGenera.setOnClickListener {
+            toast.show()
+            val random = (1..valSeekBar.progress).random()
+            valLblNumero.text = random.toString()
         }
 
-        valBtnPlato.setOnClickListener{
-            val nuevoPlato = valtxtQueSePedira.text.toString()
-            listaPlatos.add(nuevoPlato)
-            valtxtQueSePedira.text.clear()
-        }
-         */
     }
 }
