@@ -2,7 +2,6 @@ package salva.pmdm.numerandom
 
 import android.os.Bundle
 import android.view.Gravity
-import android.view.View
 import android.widget.Button
 import android.widget.SeekBar
 import android.widget.TextView
@@ -19,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val valSeekBar = findViewById<SeekBar>(R.id.seekBar)
         val valNumTope = findViewById<TextView>(R.id.lblNumTope)
         val toast = Toast.makeText(this@MainActivity,
-            "Sorteando...", Toast.LENGTH_LONG
+            getString(R.string.sorteando), Toast.LENGTH_LONG
         )
         toast.setGravity(Gravity.CENTER or Gravity.CENTER_HORIZONTAL, 0, 40)
         valNumTope.text = getString(R.string.numero_tope) + " 0"

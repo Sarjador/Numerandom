@@ -3,4 +3,5 @@
     <string name="numero_tope">Número Tope:</string>
     <string name="numero">0</string>
     <string name="btnGenera">GENERA</string>
+    <string name="sorteando">Sorteando...</string>
 </resources>
