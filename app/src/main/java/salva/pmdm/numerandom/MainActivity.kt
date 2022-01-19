@@ -2,6 +2,7 @@ package salva.pmdm.numerandom
 
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
 import android.widget.Button
 import android.widget.SeekBar
 import android.widget.TextView
@@ -16,11 +17,22 @@ class MainActivity : AppCompatActivity() {
         val valLblNumero = findViewById<TextView>(R.id.lblNumero)
         val valBtnGenera = findViewById<Button>(R.id.btnGenera)
         val valSeekBar = findViewById<SeekBar>(R.id.seekBar)
-
+        val valNumTope = findViewById<TextView>(R.id.lblNumTope)
         val toast = Toast.makeText(this@MainActivity,
             "Sorteando...", Toast.LENGTH_LONG
         )
         toast.setGravity(Gravity.CENTER or Gravity.CENTER_HORIZONTAL, 0, 40)
+        valNumTope.text = getString(R.string.numero_tope) + " 0"
+
+        valSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+            }
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+            }
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+                valNumTope.text = getString(R.string.numero_tope) + " " + valSeekBar.progress
+            }
+        })
 
         valBtnGenera.setOnClickListener {
             valLblNumero.text = ""
