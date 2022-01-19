@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         val valSeekBar = findViewById<SeekBar>(R.id.seekBar)
 
         val toast = Toast.makeText(this@MainActivity,
-            "Sorteando...", Toast.LENGTH_SHORT
+            "Sorteando...", Toast.LENGTH_LONG
         )
-        toast.setGravity(Gravity.CENTER or Gravity.CENTER_HORIZONTAL, 0, 0)
+        toast.setGravity(Gravity.CENTER or Gravity.CENTER_HORIZONTAL, 0, 450)
 
         valBtnGenera.setOnClickListener {
             toast.show()
