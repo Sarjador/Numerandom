@@ -1,14 +1,12 @@
 package salva.pmdm.numerandom
 
 import android.os.Bundle
-import android.os.SystemClock.sleep
 import android.view.Gravity
 import android.widget.Button
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,14 +26,12 @@ class MainActivity : AppCompatActivity() {
             valLblNumero.text = ""
             toast.show()
 
-            val hilo = Thread(Runnable {
-                Thread.sleep(4000);
+            val hilo = Thread {
+                Thread.sleep(4000)
                 val random = (1..valSeekBar.progress).random()
                 valLblNumero.text = random.toString()
-            })
+            }
             hilo.start()
-
         }
-
     }
 }
